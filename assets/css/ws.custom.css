@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
+.divider {
+    border       : 1px solid #d24d57;
+    width        : 50%;
+    margin       : auto;
+    margin-top   : 10%;
+    margin-bottom: 10%;
+}
+
+.main {
+    margin-top: 5%;
+}
+
+.portfolio-divider {
+    border-bottom: 1px solid #d24d57;
+    width        : 50%;
+    margin-bottom: 15px;
+}
+
+.ws-header {
+    background-image : url('/assets/img/wall.jpg');
+    background-repeat: no-repeat;
+    background-size  : 100%;
+    height           : 100vh;
+}
+
+.ws-header nav a {
+    color: #ffffff;
+}
+
+.ws-about {
+    width  : 100%;
+    padding: 15% 0 10% 0;
+}
+
+.ws-name {
+    color: #d24d57;
+}
+
+.ws-portfolio-border {
+    border-bottom: 1px solid #d24d57;
+}
+
+.ws-about a,
+.ws-tags {
+    border    : 1px solid #d24d57;
+    color     : #d24d57;
+    transition: all ease 0.35s;
+}
+
+.ws-about a:hover,
+.ws-tags:hover {
+    background-color: #d24d57;
+    color           : #ffffff;
+}
+
+.ws-portfolio {
+    border            : 1px solid #cccccc;
+    border-radius     : 10px;
+    -webkit-box-shadow: 0px 0px 60px -14px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow   : 0px 0px 60px -14px rgba(0, 0, 0, 0.42);
+    box-shadow        : 0px 0px 60px -14px rgba(0, 0, 0, 0.42);
+}
+
+.ws-portfolio-description {
+    position: relative;
+}
+
+.tags {
+    position: absolute;
+    bottom  : 0;
+    padding : 0 10px 15px 0;
+}
+
+.tags a {
+    margin-bottom: 5px;
+}
+
+.ws-details {
+    border-radius        : 10px 5px 5px 10px;
+    padding              : 10px 20px;
+    /*   background-color: #d24d57; */
+}
+
+.ws-details a {
+    color          : #d24d57;
+    text-decoration: none;
+}
+
+.ws-details p {
+    font-family: 'Ubuntu', sans-serif;
+    color      : rgb(95, 95, 95)
+}
+
+.ws-container {
+    padding: 0;
+}
+
+.ws-container img {
+    border-radius: 0px 5px 5px 0px;
+    margin-left  : 1px;
+}
+
+.ws-container-left {
+    padding: 0;
+}
+
+.ws-container-left img {
+    border-radius: 10px 0px 0px 10px;
+}
+
+footer {
+    background-color: #141c3a;
+    height          : 100vh;
+    margin-top      : 10%;
+}
+
+footer .footer-btn,
+footer .footer-btn:hover {
+    border       : 2px solid #ffffff;
+    border-radius: 12px;
+    color        : #ffffff;
+}
+
+.ws-footer {
+    height          : 20vh;
+    width           : 90%;
+    margin          : auto;
+    background-color: #d24d57;
+    border-radius   : 12px;
+    position        : relative;
+    top             : -60px;
+}
+
+.ws-title {
+    color     : #ffffff;
+    margin-top: 10;
+    opacity   : 0.7;
+}
+
+.ws-contact a {
+    border       : 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    color        : #ffffff;
+    padding      : 15px;
+    margin       : 0 10px;
+}
+
+.ws-contact i {
+    font-size: 20px;
+
+}
+
+
+@media (max-width: 992px) {
+    .sideMenu {
+        position  : fixed;
+        top       : 0;
+        bottom    : 0;
+        left      : 0;
+        margin    : auto;
+        overflow-y: auto;
+        transform : translateX(-100%);
+        transition: all ease 0.25s;
+    }
+
+    .sideMenu.open {
+        transform: translateX(0);
+    }
+
+    .overlay {
+        position        : fixed;
+        top             : 0;
+        left            : 0;
+        bottom          : 0;
+        right           : 0;
+        margin          : auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        display         : none;
+    }
+
+    .overlay.open {
+        display: block;
+    }
+
+    .ws-header {
+        height: 100%;
+    }
+
+    .ws-about {
+        padding-top: 5%;
+    }
+
+    .ws-about .ws-d-grid {
+        display: grid;
+    }
+
+    .ws-about h1 {
+        font-size: 30px;
+    }
+
+    .ws-about h3 {
+        font-size: 25px;
+    }
+
+    .tags {
+        position: inherit;
+        bottom  : 0;
+    }
+
+    .ws-portfolio {
+        /* margin-bottom: 25%; */
+        box-shadow: none;
+    }
+
+    footer {
+        margin-top: 20%;
+    }
+
+    .ws-footer {
+        height: 24vh;
+    }
+
+    .ws-contact{
+        margin-top: 20%;
+    }
+}
+
+/* media */
+
+/*
+*
+*
+*/
+
+
+.ws-fade-in {
+    animation-name    : ws-about;
+    animation-duration: 2s;
+
+}
+
+@keyframes ws-about {
+    from {
+        transform: translateY(50%);
+        opacity  : 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity  : 1;
+    }
+}
