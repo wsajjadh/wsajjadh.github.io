@@ -689,5 +689,27 @@
 
 <script src="js/projects.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    document.querySelector('[data-project="mld"]').click();
+    setTimeout(function () {
+      var panel = document.querySelector('.modal__panel');
+      var body  = document.querySelector('.modal__body');
+      var thumbs = document.querySelector('.gallery__thumbs');
+      var rows = [['viewport', window.innerWidth],
+                  ['docScrollW', document.documentElement.scrollWidth],
+                  ['panel', Math.round(panel.getBoundingClientRect().width)],
+                  ['body', Math.round(body.getBoundingClientRect().width), 'scrollW=' + body.scrollWidth],
+                  ['thumbs', Math.round(thumbs.getBoundingClientRect().width), 'scrollW=' + thumbs.scrollWidth]];
+      Array.prototype.forEach.call(body.children, function (c) {
+        rows.push([c.className, Math.round(c.getBoundingClientRect().width), 'scrollW=' + c.scrollWidth]);
+      });
+      document.title = 'RESULT ' + JSON.stringify(rows);
+    }, 1500);
+  }, 400);
+});
+</script>
 </body>
 </html>
